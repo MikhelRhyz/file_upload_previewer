@@ -4,6 +4,13 @@
 const fileInput = document.getElementById("fileInput");
 const previewContainer = document.getElementById("previewContainer");
 const previewImage = document.getElementById("previewImg");
+const clearBtn = document.getElementById("clearBtn");
+
+clearBtn.addEventListener("click", function () {
+ previewImage.src = "";
+ previewContainer.classList.add("d-none");
+ fileInput.value = "";
+});
 
 fileInput.addEventListener("change", function () {
   const file = fileInput.files[0];
